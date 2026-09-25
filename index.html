@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AttendEase - Attendance Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>AttendEase</h1>
+        <p>Smart Attendance Calculator</p>
+    </header>
+
+    <main>
+
+        <section class="calculator">
+
+            <h2>Calculate Your Attendance</h2>
+
+            <div class="input-group">
+                <label for="present">Classes Attended</label>
+                <input type="number" id="present" placeholder="e.g. 32">
+            </div>
+
+            <div class="input-group">
+                <label for="total">Total Classes</label>
+                <input type="number" id="total" placeholder="e.g. 40">
+            </div>
+
+            <div class="input-group">
+                <label for="target">Required Attendance (%)</label>
+                <input type="number" id="target" value="75">
+            </div>
+
+            <button onclick="calculateAttendance()">
+                Calculate Attendance
+            </button>
+
+            <div id="result" class="result-card">
+    <h3>Your Attendance</h3>
+    <div id="percentage">--%</div>
+    <p id="status">Enter your attendance details</p>
+    <p id="advice"></p>
+</div>
+
+        </section>
+        <section class="planner">
+
+    <h2>Future Classes Planner</h2>
+
+    <div class="input-group">
+        <label for="futureClasses">Upcoming Classes</label>
+        <input type="number" id="futureClasses" placeholder="e.g. 20">
+    </div>
+
+    <button onclick="planAttendance()">
+        Plan My Attendance
+    </button>
+
+    <div id="plannerResult" class="result-card">
+        <h3>Your Future Plan</h3>
+        <p id="planText">Enter your upcoming classes.</p>
+    </div>
+
+</section>
+<section class="subjects">
+
+    <h2>Subject-wise Attendance</h2>
+
+    <div class="input-group">
+        <label for="subjectName">Subject Name</label>
+        <input type="text" id="subjectName" placeholder="e.g. Python">
+    </div>
+
+    <div class="input-group">
+        <label for="subjectPresent">Classes Attended</label>
+        <input type="number" id="subjectPresent" placeholder="e.g. 32">
+    </div>
+
+    <div class="input-group">
+        <label for="subjectTotal">Total Classes</label>
+        <input type="number" id="subjectTotal" placeholder="e.g. 40">
+    </div>
+
+    <button onclick="addSubject()">
+        Add Subject
+    </button>
+
+    <div id="subjectList"></div>
+
+</section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AttendEase | Made for Students</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
